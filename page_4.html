@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>認証設定</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { 800: "#173B72", 700: "#1E4C8F" },
+                        line: "#C1C1C1",
+                        page: "#F3F4F6",
+                        panel: "#F5F6F8",
+                    },
+                    boxShadow: {
+                        soft: "0 8px 24px rgba(15, 23, 42, 0.08)",
+                        thin: "0 2px 10px rgba(15, 23, 42, 0.06)",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="min-h-screen bg-page text-slate-900">
+    <!-- Top bar -->
+    <header class="bg-brand-800">
+        <div class="flex h-14 items-center justify-between px-4">
+            <!-- logo -->
+            <div class="flex items-center gap-2 text-white">
+                <div class="grid h-[50px] w-[138px] place-items-center">
+                    <img src="../img/setting_icon.svg" alt="" />
+                </div>
+            </div>
+
+            <button
+                class="flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-sm text-white hover:bg-white/15"
+                type="button">
+                <span class="grid h-6 w-6 place-items-center rounded-full bg-white"></span>
+                <span>管理者A</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-white/90">
+                    <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page header -->
+    <div class="bg-white">
+        <div class="mx-auto max-w-6xl px-6 py-4">
+            <a href="#" class="text-[14px] text-slate-500 hover:text-slate-700">
+                プロジェクト管理に戻る
+            </a>
+
+            <h1 class="mt-2 text-[24px] font-bold text-slate-900">
+                認証設定
+            </h1>
+
+            <p class="mt-1 text-[14px] leading-[20px] text-slate-500">
+                外部システムと連携し、より便利にオクトンを使うことができます。
+            </p>
+        </div>
+    </div>
+
+    <!-- Body -->
+    <main class="mx-auto max-w-6xl px-4 py-6">
+        <section class="flex flex-col gap-6 lg:flex-row lg:items-start">
+            <aside class="w-full lg:w-[264px] lg:shrink-0">
+                <div class="space-y-2">
+                    <button type="button"
+                        class="flex h-[48px] w-full items-center justify-between gap-3 rounded-lg bg-white px-3 text-left shadow-thin">
+                        <span class="min-w-0 truncate text-sm font-semibold text-slate-800">Lark Drive API</span>
+                        <span class="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#21C763]">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-white">
+                                <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.6"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </button>
+
+                    <button type="button"
+                        class="flex h-[48px] w-full items-center justify-between gap-3 rounded-lg border-2 border-slate-800 bg-white px-3 text-left shadow-thin">
+                        <span class="flex min-w-0 items-center gap-2">
+                            <span class="grid h-[28px] w-[28px] shrink-0 place-items-center">
+                                <img src="./img/setting_driver.svg" alt="">
+                            </span>
+                            <span class="min-w-0 truncate text-sm font-semibold text-slate-800">Google Drive API</span>
+                        </span>
+
+                        <span class="shrink-0 rounded-full bg-line px-3 py-1 text-[12px] font-semibold text-white">
+                            未認証
+                        </span>
+                    </button>
+
+                    <button type="button"
+                        class="flex h-[48px] w-full items-center justify-between gap-3 rounded-lg bg-white px-3 text-left shadow-thin hover:bg-slate-50">
+                        <span class="flex min-w-0 items-center gap-2">
+                            <span class="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-white"></span>
+                            <span class="min-w-0 truncate text-sm font-semibold text-slate-700">Google Sheets API</span>
+                        </span>
+
+                        <span class="shrink-0 rounded-full bg-[#C1C1C1] px-3 py-1 text-[12px] font-semibold text-white">
+                            未認証
+                        </span>
+                    </button>
+                </div>
+            </aside>
+
+            <!-- RIGHT -->
+            <div class="min-w-0 flex-1 max-w-[792px] rounded-lg bg-white">
+                <div class="p-6 flex flex-col gap-6">
+                    <section class="w-full rounded-lg">
+                        <div class="flex items-start justify-between gap-3">
+                            <h2 class="text-[20px] text-[#2E3A3C]">
+                                <span class="font-bold">認証ステータス |</span> Lark Drive API
+                            </h2>
+
+                            <button type="button"
+                                class="shrink-0 rounded-full bg-[#FAE6E5] px-3 py-1 text-[12px] font-bold text-[#DD514C]">
+                                認証解除
+                            </button>
+                        </div>
+
+                        <!-- summary panel -->
+                        <div class="mt-2 rounded-lg bg-[#F5F5F5] px-4 py-3">
+                            <div class="flex items-center gap-2">
+                                <span class="grid h-6 w-6 place-items-center rounded-full bg-[#21C763]">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-white">
+                                        <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.6"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="text-[14px] font-semibold text-[#00893A]">認証済</span>
+                            </div>
+
+                            <dl class="mt-3 space-y-2 text-[14px] text-[#2E3A3C]">
+                                <div class="flex gap-3">
+                                    <dt class="w-28 shrink-0 font-normal text-[#2E3A3C]">認証情報：</dt>
+                                    <dd class="min-w-0 truncate">cl_a87f73************</dd>
+                                </div>
+                                <div class="flex gap-3">
+                                    <dt class="w-28 shrink-0 font-normal text-[#2E3A3C]">最終更新：</dt>
+                                    <dd class="min-w-0 truncate">2025-11-11 12:52:50</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </section>
+
+                    <!-- Detail -->
+                    <section class="w-full rounded-lg">
+                        <h3 class="text-[16px] font-bold text-[#2E3A3C]">認証情報詳細</h3>
+
+                        <div class="mt-2 rounded-lg bg-[#F5F5F5] px-4 py-3">
+                            <dl class="grid gap-y-3 text-[14px] text-[#2E3A3C] sm:grid-cols-[180px_1fr] sm:gap-x-6">
+                                <dt class="text-[#6B7280]">App ID</dt>
+                                <dd class="min-w-0 truncate">cli_a87f73************</dd>
+
+                                <dt class="text-[#6B7280]">App Secret</dt>
+                                <dd class="min-w-0 truncate">35**********************DX</dd>
+
+                                <dt class="text-[#6B7280]">リダイレクトURL</dt>
+                                <dd class="min-w-0 truncate">https://app.octon-ai.com/lark/callback</dd>
+
+                                <dt class="text-[#6B7280]">管理者メールアドレス</dt>
+                                <dd class="min-w-0 truncate">komugi6622@gmail.com</dd>
+
+                                <dt class="text-[#6B7280]">デフォルトフォルダID</dt>
+                                <dd class="min-w-0 truncate">Qn2fjJtual8kCldeDfSjn3lEp5q</dd>
+                            </dl>
+                        </div>
+                    </section>
+                </div>
+                <div class="flex justify-end border-t-2 border-[#D9D9D9] px-6 py-3">
+                    <button type="button"
+                        class="inline-flex h-[48px] w-full max-w-[120px] items-center justify-center rounded-[24px] bg-[#2E3A3C] px-6 text-[14px] font-normal text-white hover:opacity-90">
+                        編集する
+                    </button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>
