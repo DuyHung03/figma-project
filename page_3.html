@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>認証設定</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
         @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
@@ -18,14 +22,14 @@
 
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="fixed inset-0 bg-[#2D3A3C]/50 flex items-center justify-center z-50 p-4">
-        <div class="bg-white rounded-lg shadow-xl w-full max-w-[560px]
-             max-h-[90vh] sm:h-[420px]
-             relative flex flex-col overflow-hidden">
-            <button class="absolute top-4 right-4 flex items-center justify-center z-10">
+        <div class="bg-white rounded-[12px] shadow-xl w-full max-w-[560px]
+             max-h-[95vh] sm:h-[422px] relative flex flex-col overflow-hidden">
+
+            <button class="absolute top-3 right-3 flex items-center justify-center z-10">
                 <img src="./img/modal_icon_close.svg" alt="close" class="w-[24px] h-[24px] sm:w-[28px] sm:h-[28px]">
             </button>
 
-            <div class="shrink-0 min-h-[105px] flex flex-col items-center justify-center px-4 sm:px-6 text-center">
+            <div class="shrink-0 h-24 sm:h-[105px] flex flex-col items-center justify-center px-4 sm:px-6 text-center">
                 <h2 class="text-[24px] sm:text-[28px] font-bold text-[#2D3A3C] mb-2">認証設定</h2>
                 <p class="text-[14px] font-normal text-[#2E3A3C]">
                     外部システムと連携し、より便利にオクトンを使うことができます。
@@ -44,13 +48,8 @@
                                     <h3 class="text-[16px] sm:text-[18px] font-bold text-[#2D3A3C] truncate">
                                         Lark Drive API認証設定
                                     </h3>
-                                    <span class="shrink-0 text-[#21C763]">
-                                        <svg class="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]" fill="currentColor"
-                                            viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd"
-                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
+                                    <span class="shrink-0 text-[#21C763] text-[22px]">
+                                        <i class="fa-solid fa-circle-check"></i>
                                     </span>
                                 </div>
                                 <p class="text-[14px] font-normal text-[#2E3A3C]">
@@ -62,10 +61,7 @@
                         <button
                             class="shrink-0 text-white bg-[#1A92F7] rounded-full h-[40px] w-[40px] flex items-center justify-center"
                             type="button">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                                </path>
-                            </svg>
+                            <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>
                 </div>
@@ -95,10 +91,7 @@
                         <button
                             class="shrink-0 text-white bg-[#1A92F7] rounded-full h-[40px] w-[40px] flex items-center justify-center"
                             type="button">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                                </path>
-                            </svg>
+                            <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>
                 </div>
@@ -128,10 +121,7 @@
                         <button
                             class="shrink-0 text-white bg-[#1A92F7] rounded-full h-[40px] w-[40px] flex items-center justify-center"
                             type="button">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                                </path>
-                            </svg>
+                            <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>
                 </div>

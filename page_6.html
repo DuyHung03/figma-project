@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>認証設定</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
         @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
@@ -30,14 +34,11 @@
                 type="button">
                 <span class="grid h-6 w-6 place-items-center rounded-full bg-white"></span>
                 <span>管理者A</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-white/90">
-                    <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                </svg>
+                <i class="fa-solid fa-chevron-down text-white text-[12px]"></i>
             </button>
         </div>
     </header>
 
-    <!-- Page header -->
     <div class="bg-white">
         <div class="mx-auto max-w-6xl px-6 py-4">
             <a href="#" class="text-[14px] text-slate-500 hover:text-slate-700">
@@ -54,7 +55,6 @@
         </div>
     </div>
 
-    <!-- Body -->
     <main class="mx-auto max-w-6xl px-4 py-6">
         <section class="flex flex-col gap-6 lg:flex-row lg:items-start">
             <aside class="w-full lg:w-[264px] lg:shrink-0">
@@ -62,11 +62,8 @@
                     <button type="button"
                         class="flex h-[48px] w-full items-center justify-between gap-3 rounded-lg bg-white px-3 text-left shadow-[0_2px_10px_rgba(15,23,42,0.06)]">
                         <span class="min-w-0 truncate text-sm font-semibold text-slate-800">Lark Drive API</span>
-                        <span class="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#21C763]">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-white">
-                                <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.6"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
+                        <span class="grid h-[22px] w-[22px] shrink-0 place-items-center rounded-full bg-[#21C763]">
+                            <i class="fa-solid fa-check text-white text-[12px]"></i>
                         </span>
                     </button>
 
