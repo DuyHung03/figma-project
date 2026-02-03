@@ -1,156 +1,87 @@
 <!doctype html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ログイン - 書類回収AI BOT オクトン</title>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <style>
-            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
-            @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
 
-            body {
-                font-family: "Noto Sans JP", "Poppins", sans-serif;
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ログイン - 書類回収AI BOT オクトン</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
 
-            .octopus-pattern {
-                position: relative;
-                background-color: #a8d8ea;
-            }
+        body {
+            font-family: "Poppins", "Noto Sans JP", sans-serif;
+        }
+    </style>
+</head>
 
-            .octopus-pattern::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background-image: url("/img/bg-cta.png");
-                background-size: cover;
-                background-position: center;
-                opacity: 0.4;
-                z-index: 0;
-            }
+<body class="h-full min-h-screen flex flex-col font-sans">
+    <main class="relative flex-1 flex items-center justify-center px-4 py-8 bg-[#A8D8EA]">
+        <div class="pointer-events-none absolute inset-0 bg-[url('/img/bg-cta.png')] bg-cover bg-center opacity-40"
+            aria-hidden="true"></div>
 
-            .octopus-pattern > * {
-                position: relative;
-                z-index: 1;
-            }
-
-            /* Custom login card shadow from design */
-            .login-card {
-                box-shadow:
-                    rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-                    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-            }
-        </style>
-    </head>
-
-    <body class="min-h-screen flex flex-col">
-        <main
-            class="octopus-pattern flex-1 flex items-center justify-center px-4 py-8 min-h-[748px]"
-        >
-            <!-- Login Card -->
-            <div class="w-full max-w-[580px] bg-white rounded-[20px] login-card pt-6 px-8 pb-10">
-                <!-- Logo and Title -->
-                <div class="flex flex-col items-center">
-                    <!-- Octopus Logo -->
-                    <div class="w-full flex">
-                        <img
-                            src="/img/octon.png"
-                            alt="Octopus Logo"
-                            class="w-[286px] h-[286px] mx-auto"
-                        />
-                    </div>
-                    <h3 class="text-[28px] font-bold text-[#2D3A3C] mb-6">ログイン</h3>
-                </div>
-
-                <!-- Login Form -->
-                <form class="space-y-4 mb-6">
-                    <!-- Email Input -->
-                    <div class="flex justify-center">
-                        <div class="relative w-[420px]">
-                            <div
-                                class="absolute inset-y-0 left-4 flex items-center pointer-events-none"
-                            >
-                                <i class="fas fa-envelope text-gray-400 fa-lg"></i>
-                            </div>
-                            <input
-                                id="email"
-                                type="email"
-                                placeholder="メールアドレス"
-                                class="w-full h-[48px] pl-12 pr-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-[16px]"
-                                required
-                            />
-                        </div>
-                    </div>
-                    <!-- Password Input -->
-                    <div class="flex justify-center">
-                        <div class="relative w-[420px]">
-                            <div
-                                class="absolute inset-y-0 left-4 flex items-center pointer-events-none"
-                            >
-                                <i class="fas fa-lock text-gray-400 fa-lg"></i>
-                            </div>
-                            <input
-                                id="password"
-                                type="password"
-                                placeholder="パスワード"
-                                class="w-full h-[48px] pl-12 pr-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-[16px]"
-                                required
-                            />
-                        </div>
-                    </div>
-
-                    <!-- Login Button -->
-                    <div class="flex justify-center">
-                        <button
-                            type="submit"
-                            class="w-[250px] h-[56px] bg-[#1A92F7] text-white rounded-full font-bold text-[20px] hover:bg-blue-600 transition-colors font-bold"
-                        >
-                            ログイン
-                        </button>
-                    </div>
-                </form>
-
-                <!-- Forgot Password Link -->
-                <div class="text-center">
-                    <a
-                        href="#"
-                        class="text-[14px] text-[#2D3A3C] hover:text-blue-600 transition-colors font-bold"
-                    >
-                        パスワードを忘れた場合はこちら
-                    </a>
-                </div>
+        <div
+            class="relative z-10 w-full max-w-[580px] min-h-[688px] rounded-[20px] bg-white pt-2 px-8  shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)]">
+            <div class="flex flex-col items-center">
+                <img src="/img/octon.png" alt="Octopus Logo" class="h-[286px] w-[286px] object-contain" />
+                <h3 class="mt-0 mb-6 text-[28px] font-bold text-[#2D3A3C]">ログイン</h3>
             </div>
-        </main>
 
-        <!-- Footer Section -->
-        <footer class="bg-white h-[113px] flex items-center">
-            <div class="container mx-auto px-4">
-                <div class="text-center">
-                    <div
-                        class="flex flex-wrap justify-center items-center gap-2 md:gap-4 text-[14px] text-[#2D3A3C] mb-4"
-                    >
-                        <a href="#" class="hover:text-blue-600 transition-colors"
-                            >はじめての使い方</a
-                        >
-                        <span class="text-gray-400 text-[14px]">/</span>
-                        <a href="#" class="hover:text-blue-600 transition-colors">よくある質問</a>
-                        <span class="text-gray-400 text-[14px]">/</span>
-                        <a href="#" class="hover:text-blue-600 transition-colors">お問い合わせ</a>
-                        <span class="text-gray-400 text-[14px]">/</span>
-                        <a href="#" class="hover:text-blue-600 transition-colors"
-                            >プライバシーポリシー</a
-                        >
+            <!-- Login Form -->
+            <form class="space-y-4 mb-4">
+                <div class="flex justify-center">
+                    <div class="relative w-full max-w-[420px]">
+                        <i
+                            class="fas fa-envelope fa-lg pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                        <input id="email" type="email" placeholder="メールアドレス"
+                            class="h-[48px] w-full rounded-lg border border-gray-300 bg-white pl-12 pr-4 text-[16px] outline-none focus:border-transparent focus:ring-2 focus:ring-[#1A92F7]"
+                            required />
                     </div>
-                    <p class="text-[12px] text-gray-500">© オクトン All rights reserved.</p>
                 </div>
+
+                <div class="flex justify-center">
+                    <div class="relative w-full max-w-[420px]">
+                        <i
+                            class="fas fa-lock fa-lg pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                        <input id="password" type="password" placeholder="パスワード"
+                            class="h-[48px] w-full rounded-lg border border-gray-300 bg-white pl-12 pr-4 text-[16px] outline-none focus:border-transparent focus:ring-2 focus:ring-[#1A92F7]"
+                            required />
+                    </div>
+                </div>
+
+                <div class="flex justify-center pt-2">
+                    <button type="submit"
+                        class="h-[56px] w-[250px] rounded-full bg-[#1A92F7] text-[20px] font-bold text-white transition-colors hover:bg-blue-600">
+                        ログイン
+                    </button>
+                </div>
+            </form>
+
+            <div class="text-center">
+                <a href="#" class="text-[14px] font-bold text-[#2D3A3C] transition-colors hover:text-blue-600">
+                    パスワードを忘れた場合はこちら
+                </a>
             </div>
-        </footer>
-    </body>
+        </div>
+    </main>
+
+
+    <footer class="h-[113px] bg-white flex items-center">
+        <div class="mx-auto w-full max-w-6xl px-4 text-center">
+            <div class="mb-4 flex flex-wrap items-center justify-center gap-2 text-[14px] text-[#2D3A3C] md:gap-4">
+                <a href="#" class="transition-colors hover:text-blue-600">はじめての使い方</a>
+                <span class="text-gray-400 text-[14px]">/</span>
+                <a href="#" class="transition-colors hover:text-blue-600">よくある質問</a>
+                <span class="text-gray-400 text-[14px]">/</span>
+                <a href="#" class="transition-colors hover:text-blue-600">お問い合わせ</a>
+                <span class="text-gray-400 text-[14px]">/</span>
+                <a href="#" class="transition-colors hover:text-blue-600">プライバシーポリシー</a>
+            </div>
+            <p class="text-[12px] text-gray-500">© オクトン All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
 </html>
